@@ -12,6 +12,10 @@ public final class Booking implements BookingInterface {
         initializeBuilding(building);
     }
 
+    public Booking() {
+
+    }
+
     private void initializeBuilding(BuildingInterface building) {
         if (!deskAllocation.containsKey(building)) {
             buildings.add(building);

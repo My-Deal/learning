@@ -1,18 +1,23 @@
 package data.structure.linklist;
 
 public class SingleLinkedList<T> {
+
     private SingleNode<T> head;
 
     public SingleLinkedList() {
+        head=null;
+    }
 
+    public SingleNode<T> getHead() {
+        return head;
     }
 
     public SingleLinkedList(T data) {
-        head = new SingleNode<>(data, null);
+        head = new SingleNode<>(data);
     }
 
     public void addToHead(T data) {
-        SingleNode<T> temp = new SingleNode<>(data, null);
+        SingleNode<T> temp = new SingleNode<>(data);
         if (head == null) {
             head = temp;
         } else {
@@ -24,12 +29,12 @@ public class SingleLinkedList<T> {
     public void addToTail(T data) {
         SingleNode<T> temp = head;
         if (head==null){
-            head=new SingleNode<>(data,null);
+            head=new SingleNode<>(data);
         }else {
             while (temp.getNext() != null) {
                 temp = temp.getNext();
             }
-            temp.setNext(new SingleNode(data, null));
+            temp.setNext(new SingleNode(data));
         }
     }
 

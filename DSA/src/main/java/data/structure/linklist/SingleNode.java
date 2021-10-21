@@ -1,11 +1,11 @@
 package data.structure.linklist;
 
 public class SingleNode<T> {
-    private T data;
-    private SingleNode next;
-    public SingleNode(T data,SingleNode<T> next){
+      T data;
+     SingleNode next;
+    public SingleNode(T data){
         this.data=data;
-        this.next=next;
+        this.next=null;
     }
 
     public T getData() {
