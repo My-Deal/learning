@@ -7,7 +7,7 @@ public class Data {
     public synchronized void send(String packet){
         while (!transfer){
             try {
-                wait();
+                this.wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -15,20 +15,20 @@ public class Data {
 
         this.packet=packet;
             transfer=false;
-            notify();
+            this.notify();
     }
 
     public synchronized String receive(){
         while (transfer){
             try {
-                wait();
+                this.wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
         }
         transfer=true;
-        notify();
+        this.notify();
         return this.packet;
     }
 }
