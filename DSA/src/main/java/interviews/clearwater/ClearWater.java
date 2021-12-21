@@ -1,4 +1,4 @@
-package javapractice;
+package interviews.clearwater;
 
 import java.util.*;
 import java.util.function.BiFunction;
