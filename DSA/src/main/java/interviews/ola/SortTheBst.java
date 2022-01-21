@@ -1,4 +1,6 @@
-package data.structure.tree;
+package interviews.ola;
+
+import data.structure.tree.bst.BinarySearchTreeImpl;
 
 public class SortTheBst {
     public static void main(String[] args) {
